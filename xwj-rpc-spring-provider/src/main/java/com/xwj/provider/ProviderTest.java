@@ -11,8 +11,8 @@ public class ProviderTest {
 
 	public static void main(String[] args) {
 		EchoServiceApi service = new EchoServiceApiImpl();
-		RpcServer rpcServer = new RpcServer();
-		rpcServer.publisher(service, 8080);
+		RpcServer proxyServer = new RpcServer();
+		proxyServer.publisher(service, 8080);
 	}
 
 }

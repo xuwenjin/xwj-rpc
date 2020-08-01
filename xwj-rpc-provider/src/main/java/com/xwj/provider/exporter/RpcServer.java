@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
  * 
  * 3、远程调用完成之后，释放Socket等连接资源，防止句柄泄露
  */
-public class RpcProxyServer {
+public class RpcServer {
 
 	/** 定义一个线程池 */
 	private ExecutorService executorService = Executors.newCachedThreadPool();

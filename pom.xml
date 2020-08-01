@@ -9,6 +9,8 @@
 		<module>xwj-rpc-consumer</module>
 		<module>xwj-rpc-provider</module>
 		<module>xwj-rpc-provider-api</module>
+		<module>xwj-rpc-spring-provider</module>
+		<module>xwj-rpc-spring-consumer</module>
 	</modules>
 
 	<build>

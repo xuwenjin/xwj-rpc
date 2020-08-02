@@ -66,16 +66,21 @@ public class ProcessorHandler implements Runnable {
 	 */
 	private Object invoke(RpcRequest rpcRequest)
 			throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+		// 1、获取客户端传过来的参数和参数类型
+		Class<?>[] types = null;
 		Object[] args = rpcRequest.getParameters();
-		Class<?>[] types = new Class[args.length];
-		for (int i = 0; i < args.length; i++) {
-			types[i] = args[i].getClass();
+		if (args != null && args.length > 0) {
+			types = new Class[args.length];
+			for (int i = 0; i < args.length; i++) {
+				types[i] = args[i].getClass();
+			}
 		}
 
+		// 2、获取客户端传过来的方法
 		Class<?> clazz = Class.forName(rpcRequest.getClassName());
 		Method method = clazz.getMethod(rpcRequest.getMethodName(), types);
 
-		// 这个target是通过构造方法传递进来的
+		// 3、服务端执行对应方法
 		return method.invoke(target, args);
 	}
 

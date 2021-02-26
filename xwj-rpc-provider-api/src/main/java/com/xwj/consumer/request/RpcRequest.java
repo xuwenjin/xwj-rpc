@@ -3,7 +3,7 @@ package com.xwj.consumer.request;
 import java.io.Serializable;
 
 /**
- * 表示请求的对象，一定要记得序列化
+ * 请求的对象，一定要记得序列化(RPC底层是通过将其序列化发送给服务端)
  */
 public class RpcRequest implements Serializable {
 

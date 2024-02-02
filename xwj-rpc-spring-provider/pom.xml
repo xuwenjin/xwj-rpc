@@ -18,7 +18,7 @@
 			<!-- spring上下文。ioc 容器，可以实现bean的管理 -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>5.2.6.RELEASE</version>
+			<version>5.2.22.RELEASE</version>
 		</dependency>
 	</dependencies>
 
